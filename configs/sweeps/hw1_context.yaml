@@ -1,0 +1,26 @@
+# HW1 Task 3: context length. LSTM 2x256 vs. modern Transformer 4x256 at seq_len 64/128/256/512.
+# The token budget is held FIXED: batch_size x seq_len = 8,192 tokens/step, x 2000 steps = 16.4M tokens,
+# so a longer context does not also mean more training data.
+# LSTM settings match sweeps/01_char_models.yaml; the Transformer is 02b_char_transformer_modern.
+name: hw1_context
+base: ../02_char_transformer.yaml
+seeds: [1337, 42]
+common:
+  train.max_steps: 2000
+runs:
+  - name: lstm_T64
+    overrides: {model.arch: lstm, model.n_layers: 2, model.dim: 256, train.lr: 2e-3, train.weight_decay: 0.0, train.seq_len: 64, train.batch_size: 128}
+  - name: lstm_T128
+    overrides: {model.arch: lstm, model.n_layers: 2, model.dim: 256, train.lr: 2e-3, train.weight_decay: 0.0, train.seq_len: 128, train.batch_size: 64}
+  - name: lstm_T256
+    overrides: {model.arch: lstm, model.n_layers: 2, model.dim: 256, train.lr: 2e-3, train.weight_decay: 0.0, train.seq_len: 256, train.batch_size: 32}
+  - name: lstm_T512
+    overrides: {model.arch: lstm, model.n_layers: 2, model.dim: 256, train.lr: 2e-3, train.weight_decay: 0.0, train.seq_len: 512, train.batch_size: 16}
+  - name: gpt_modern_T64
+    overrides: {model.norm: rmsnorm, model.pos: rope, model.mlp: swiglu, model.bias: false, train.seq_len: 64, train.batch_size: 128}
+  - name: gpt_modern_T128
+    overrides: {model.norm: rmsnorm, model.pos: rope, model.mlp: swiglu, model.bias: false, train.seq_len: 128, train.batch_size: 64}
+  - name: gpt_modern_T256
+    overrides: {model.norm: rmsnorm, model.pos: rope, model.mlp: swiglu, model.bias: false, train.seq_len: 256, train.batch_size: 32}
+  - name: gpt_modern_T512
+    overrides: {model.norm: rmsnorm, model.pos: rope, model.mlp: swiglu, model.bias: false, train.seq_len: 512, train.batch_size: 16}

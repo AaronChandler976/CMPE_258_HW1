@@ -1,0 +1,63 @@
+
+=== 2026-11-08_13-17-48_L1_char_lstm  (tokenizer=char, arch=lstm, steps=2000)
+  inputs : val_loss = 1.492449 nats/token | val_tokens = 111,488 | val_bytes = 111,488
+  quantity           by hand      logged    abs diff
+  perplexity        4.447977    4.447977    0.00e+00
+  bits/token        2.153149           -           -
+  bytes/token       1.000000    1.000000    0.00e+00
+  bpb               2.153149    2.153149    0.00e+00
+  vs. uniform guess: ln V = ln 65 = 4.1744 nats | loss / ln V = 0.358 | loss - ln V = -2.6819
+
+=== byte_init_s1337  (tokenizer=byte, arch=gpt, steps=1)
+  inputs : val_loss = 5.511768 nats/token | val_tokens = 111,360 | val_bytes = 111,360
+  quantity           by hand      logged    abs diff
+  perplexity      247.588530  247.588530    0.00e+00
+  bits/token        7.951801           -           -
+  bytes/token       1.000000    1.000000    0.00e+00
+  bpb               7.951801    7.951801    8.88e-16
+  vs. uniform guess: ln V = ln 256 = 5.5452 nats | loss / ln V = 0.994 | loss - ln V = -0.0334
+
+=== byte_step1_s1337  (tokenizer=byte, arch=gpt, steps=1)
+  inputs : val_loss = 5.443421 nats/token | val_tokens = 111,360 | val_bytes = 111,360
+  quantity           by hand      logged    abs diff
+  perplexity      231.231870  231.231870    0.00e+00
+  bits/token        7.853196           -           -
+  bytes/token       1.000000    1.000000    0.00e+00
+  bpb               7.853196    7.853196    0.00e+00
+  vs. uniform guess: ln V = ln 256 = 5.5452 nats | loss / ln V = 0.982 | loss - ln V = -0.1018
+
+=== char_init_s1337  (tokenizer=char, arch=gpt, steps=1)
+  inputs : val_loss = 4.216550 nats/token | val_tokens = 111,360 | val_bytes = 111,360
+  quantity           by hand      logged    abs diff
+  perplexity       67.799202   67.799202    0.00e+00
+  bits/token        6.083196           -           -
+  bytes/token       1.000000    1.000000    0.00e+00
+  bpb               6.083196    6.083196    8.88e-16
+  vs. uniform guess: ln V = ln 65 = 4.1744 nats | loss / ln V = 1.010 | loss - ln V = +0.0422
+
+=== char_step1_s1337  (tokenizer=char, arch=gpt, steps=1)
+  inputs : val_loss = 4.160174 nats/token | val_tokens = 111,360 | val_bytes = 111,360
+  quantity           by hand      logged    abs diff
+  perplexity       64.082681   64.082681    0.00e+00
+  bits/token        6.001863           -           -
+  bytes/token       1.000000    1.000000    0.00e+00
+  bpb               6.001863    6.001863    8.88e-16
+  vs. uniform guess: ln V = ln 65 = 4.1744 nats | loss / ln V = 0.997 | loss - ln V = -0.0142
+
+=== gpt2_init_s1337  (tokenizer=gpt2, arch=gpt, steps=1)
+  inputs : val_loss = 10.821625 nats/token | val_tokens = 35,840 | val_bytes = 110,827
+  quantity           by hand      logged    abs diff
+  perplexity    50092.42404250092.424042    0.00e+00
+  bits/token       15.612305           -           -
+  bytes/token       3.092271    3.092271    0.00e+00
+  bpb               5.048815    5.048815    8.88e-16
+  vs. uniform guess: ln V = ln 50,257 = 10.8249 nats | loss / ln V = 1.000 | loss - ln V = -0.0033
+
+=== gpt2_step1_s1337  (tokenizer=gpt2, arch=gpt, steps=1)
+  inputs : val_loss = 10.792581 nats/token | val_tokens = 35,840 | val_bytes = 110,827
+  quantity           by hand      logged    abs diff
+  perplexity    48658.47637548658.476375    0.00e+00
+  bits/token       15.570404           -           -
+  bytes/token       3.092271    3.092271    0.00e+00
+  bpb               5.035265    5.035265    0.00e+00
+  vs. uniform guess: ln V = ln 50,257 = 10.8249 nats | loss / ln V = 0.997 | loss - ln V = -0.0323

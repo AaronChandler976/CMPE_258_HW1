@@ -1,0 +1,25 @@
+name,seed,arch,params,params_non_embedding,steps,tokens_seen,train_time_sec,tok_per_sec,peak_mem_mb,device,world_size,dataset,tokenizer,val_loss,val_bpb,val_ppl,val_acc,val_tokens,val_bytes,val_bytes_per_token,eval_time_sec,run_dir
+gpt_modern_T128,1337,gpt,3162624,3145984,2000,16384000,13.49,1214842,578.2,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T128_s1337
+gpt_modern_T128,42,gpt,3162624,3145984,2000,16384000,13.57,1207631,578.2,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T128_s42
+gpt_modern_T128,7,gpt,3162624,3145984,2000,16384000,13.73,1193172,578.2,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T128_s7
+gpt_modern_T256,1337,gpt,3162624,3145984,2000,16384000,13.76,1190608,578.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T256_s1337
+gpt_modern_T256,42,gpt,3162624,3145984,2000,16384000,13.76,1190510,578.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T256_s42
+gpt_modern_T256,7,gpt,3162624,3145984,2000,16384000,13.98,1172016,578.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T256_s7
+gpt_modern_T512,1337,gpt,3162624,3145984,2000,16384000,14.23,1151529,578.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T512_s1337
+gpt_modern_T512,42,gpt,3162624,3145984,2000,16384000,14.23,1151680,578.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T512_s42
+gpt_modern_T512,7,gpt,3162624,3145984,2000,16384000,14.61,1121280,578.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T512_s7
+gpt_modern_T64,1337,gpt,3162624,3145984,2000,16384000,13.52,1211524,578.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T64_s1337
+gpt_modern_T64,42,gpt,3162624,3145984,2000,16384000,13.53,1211329,578.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T64_s42
+gpt_modern_T64,7,gpt,3162624,3145984,2000,16384000,13.73,1193709,578.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/gpt_modern_T64_s7
+lstm_T128,1337,lstm,1069824,1053184,2000,16384000,8.97,1825901,152.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T128_s1337
+lstm_T128,42,lstm,1069824,1053184,2000,16384000,9.24,1772439,152.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T128_s42
+lstm_T128,7,lstm,1069824,1053184,2000,16384000,8.8,1862171,152.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T128_s7
+lstm_T256,1337,lstm,1069824,1053184,2000,16384000,14.19,1154908,151.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T256_s1337
+lstm_T256,42,lstm,1069824,1053184,2000,16384000,14.15,1158178,151.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T256_s42
+lstm_T256,7,lstm,1069824,1053184,2000,16384000,13.67,1198883,151.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T256_s7
+lstm_T512,1337,lstm,1069824,1053184,2000,16384000,24.2,676986,143.8,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T512_s1337
+lstm_T512,42,lstm,1069824,1053184,2000,16384000,24.21,676724,143.8,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T512_s42
+lstm_T512,7,lstm,1069824,1053184,2000,16384000,23.59,694575,143.8,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T512_s7
+lstm_T64,1337,lstm,1069824,1053184,2000,16384000,7.24,2262033,153.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T64_s1337
+lstm_T64,42,lstm,1069824,1053184,2000,16384000,7.36,2227037,153.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T64_s42
+lstm_T64,7,lstm,1069824,1053184,2000,16384000,6.77,2421292,153.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_context/lstm_T64_s7

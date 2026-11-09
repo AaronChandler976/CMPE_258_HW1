@@ -1,0 +1,26 @@
+# HW1 Task 1b: loss of an untrained model for several tokenizers, compared with ln(V):
+#   char V=65 -> 4.174 | byte V=256 -> 5.545 | gpt2 V=50257 -> 10.825
+# Two flavours per tokenizer:
+#   *_init  : train.lr=0  -> the weights stay exactly at their random initialization
+#   *_step1 : one real optimizer step (the HW's "train.max_steps=1"); even this tiny step moves the loss
+# The gpt2 runs download GPT-2's tokenizer files once (needs internet); drop them if that fails.
+name: hw1_untrained
+base: ../02b_char_transformer_modern.yaml
+seeds: [1337]
+common:
+  train.max_steps: 1
+  eval.sample_tokens: 0
+  train.save_checkpoint: false
+runs:
+  - name: char_init
+    overrides: {data.tokenizer: char, train.lr: 0.0}
+  - name: char_step1
+    overrides: {data.tokenizer: char}
+  - name: byte_init
+    overrides: {data.tokenizer: byte, train.lr: 0.0}
+  - name: byte_step1
+    overrides: {data.tokenizer: byte}
+  - name: gpt2_init
+    overrides: {data.tokenizer: gpt2, train.lr: 0.0}
+  - name: gpt2_step1
+    overrides: {data.tokenizer: gpt2}

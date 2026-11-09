@@ -1,0 +1,7 @@
+name,seed,arch,params,params_non_embedding,steps,tokens_seen,train_time_sec,tok_per_sec,peak_mem_mb,device,world_size,dataset,tokenizer,val_loss,val_bpb,val_ppl,val_acc,val_tokens,val_bytes,val_bytes_per_token,eval_time_sec,run_dir
+byte_init,1337,gpt,3211520,3145984,1,8192,0.16,50458,560.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/byte_init_s1337
+byte_step1,1337,gpt,3211520,3145984,1,8192,0.16,50169,560.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/byte_step1_s1337
+char_init,1337,gpt,3162624,3145984,1,8192,0.16,51106,554.3,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/char_init_s1337
+char_step1,1337,gpt,3162624,3145984,1,8192,0.16,49940,554.3,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/char_step1_s1337
+gpt2_init,1337,gpt,16011776,3145984,1,8192,0.19,43922,6864.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/gpt2_init_s1337
+gpt2_step1,1337,gpt,16011776,3145984,1,8192,0.19,42248,6864.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/hw1_untrained/gpt2_step1_s1337

@@ -1,0 +1,13 @@
+name,seed,arch,params,params_non_embedding,steps,tokens_seen,train_time_sec,tok_per_sec,peak_mem_mb,device,world_size,dataset,tokenizer,val_loss,val_bpb,val_ppl,val_acc,val_tokens,val_bytes,val_bytes_per_token,eval_time_sec,run_dir
+gpt_modern,1337,gpt,3162624,3145984,2000,16384000,13.75,1191192,578.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gpt_modern_s1337
+gpt_modern,42,gpt,3162624,3145984,2000,16384000,13.76,1190362,578.4,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gpt_modern_s42
+gpt_textbook,1337,gpt,3438336,3159552,2000,16384000,10.38,1578673,451.3,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gpt_textbook_s1337
+gpt_textbook,42,gpt,3438336,3159552,2000,16384000,10.39,1577386,451.3,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gpt_textbook_s42
+gru,1337,gru,806656,790016,2000,16384000,13.51,1212997,151.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gru_s1337
+gru,42,gru,806656,790016,2000,16384000,14.12,1160511,151.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/gru_s42
+lstm_512,1337,lstm,4236800,4203520,2000,16384000,14.13,1159642,299.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/lstm_512_s1337
+lstm_512,42,lstm,4236800,4203520,2000,16384000,14.18,1155185,299.0,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/lstm_512_s42
+lstm,1337,lstm,1069824,1053184,2000,16384000,14.19,1154798,151.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/lstm_s1337
+lstm,42,lstm,1069824,1053184,2000,16384000,14.2,1154174,151.9,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/lstm_s42
+rnn,1337,rnn,280320,263680,2000,16384000,4.16,3936148,143.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/rnn_s1337
+rnn,42,rnn,280320,263680,2000,16384000,4.15,3943488,143.6,"cuda (precision=bfloat16, compile=yes)"outputs/nanolm/sweeps/char_models/rnn_s42
